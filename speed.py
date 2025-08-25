@@ -125,8 +125,8 @@ while True:
     if int(avg_speed_up) > 0:
         cv2.putText(frame, ('speed:-') + str(int(avg_speed_up)) +(' km/h'), (15, 130), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 0, 0), 2)
 
-    cv2.imshow("RGB", frame)
+    cv2.imshow("Display", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-video_capture.release()
+cap.release()
 cv2.destroyAllWindows()
